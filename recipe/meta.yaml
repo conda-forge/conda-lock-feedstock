@@ -1,5 +1,5 @@
 {% set name = "conda-lock" %}
-{% set version = "0.2.2" %}
+{% set version = "0.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name.replace('-', '_') }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 9466a7defd4559432c78532af21bf120ecbff018d69c34039d335c2695dfb91a
+  sha256: 6225c208f054e7e520a68b46606dfef93a58702198393d7992fdf2a655096faa
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
   noarch: python
   entry_points:
     - conda-lock = conda_lock:main
