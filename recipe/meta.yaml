@@ -26,6 +26,7 @@ requirements:
     - python >=3.6
     - pyyaml
     - requests
+    - jinja2
     - setuptools
 
 test:
