@@ -5,7 +5,7 @@ Home: https://github.com/mariusvniekerk/conda-lock
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Lightweight lockfile for conda environments
 
