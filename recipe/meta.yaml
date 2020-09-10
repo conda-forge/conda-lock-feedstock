@@ -1,5 +1,5 @@
 {% set name = "conda-lock" %}
-{% set version = "0.4.1" %}
+{% set version = "0.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name.replace('-', '_') }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 9e9d4ea4374f87249fba56489734b55fea58a5a88f2d768a35f5e1bdd8562fd5
+  sha256: a3a254f5759704c75847b0fa4371d55b0c4471656a1496d1f281c50de5e5b0eb
 
 build:
   number: 0
@@ -28,6 +28,7 @@ requirements:
     - requests
     - jinja2
     - setuptools
+    - toml
 
 test:
   imports:
@@ -38,7 +39,7 @@ test:
     - pip
 
 about:
-  home: https://github.com/mariusvniekerk/{{ name }}
+  home: https://github.com/conda-incubator/{{ name }}
   license: MIT
   license_family: MIT
   license_file: LICENSE
@@ -51,8 +52,8 @@ about:
     This also has the added benefit of acting as an external presolve for conda
     as the lockfiles it generates results in the conda solver not being invoked
     when installing the packages from the generated lockfile.
-  doc_url: https://github.com/mariusvniekerk/conda-lock/blob/master/README.md
-  dev_url: https://github.com/mariusvniekerk/{{ name }}
+  doc_url: https://github.com/conda-incubator/conda-lock/blob/master/README.md
+  dev_url: https://github.com/conda-incubator/{{ name }}
 
 extra:
   recipe-maintainers:
