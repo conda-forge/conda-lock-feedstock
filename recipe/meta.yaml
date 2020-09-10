@@ -39,7 +39,7 @@ test:
     - pip
 
 about:
-  home: https://github.com/conda-tools/{{ name }}
+  home: https://github.com/conda-incubator/{{ name }}
   license: MIT
   license_family: MIT
   license_file: LICENSE
