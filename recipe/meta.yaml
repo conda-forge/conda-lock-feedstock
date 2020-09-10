@@ -28,6 +28,7 @@ requirements:
     - requests
     - jinja2
     - setuptools
+    - toml
 
 test:
   imports:
@@ -38,7 +39,7 @@ test:
     - pip
 
 about:
-  home: https://github.com/mariusvniekerk/{{ name }}
+  home: https://github.com/conda-tools/{{ name }}
   license: MIT
   license_family: MIT
   license_file: LICENSE
