@@ -52,8 +52,8 @@ about:
     This also has the added benefit of acting as an external presolve for conda
     as the lockfiles it generates results in the conda solver not being invoked
     when installing the packages from the generated lockfile.
-  doc_url: https://github.com/mariusvniekerk/conda-lock/blob/master/README.md
-  dev_url: https://github.com/mariusvniekerk/{{ name }}
+  doc_url: https://github.com/conda-incubator/conda-lock/blob/master/README.md
+  dev_url: https://github.com/conda-incubator/{{ name }}
 
 extra:
   recipe-maintainers:
