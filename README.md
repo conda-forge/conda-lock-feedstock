@@ -1,7 +1,7 @@
 About conda-lock
 ================
 
-Home: https://github.com/mariusvniekerk/conda-lock
+Home: https://github.com/conda-incubator/conda-lock
 
 Package license: MIT
 
