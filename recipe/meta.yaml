@@ -24,6 +24,7 @@ requirements:
     - setuptools_scm
   run:
     - python >=3.6
+    - ensureconda
     - pyyaml
     - requests
     - jinja2
