@@ -1,5 +1,5 @@
 {% set name = "conda-lock" %}
-{% set version = "0.6.0" %}
+{% set version = "0.7.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name.replace('-', '_') }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 410dd2843460f2e49d5c8ebc55ed24bc8406d273a7b215c37f1c75aca838ff9b
+  sha256: e28a956b876c2a860a5035e130a78e5c31ece863382fdd34cdb71df4a7f8bbf7
 
 build:
   number: 0
@@ -24,6 +24,7 @@ requirements:
     - setuptools_scm
   run:
     - python >=3.6
+    - ensureconda
     - pyyaml
     - requests
     - jinja2
