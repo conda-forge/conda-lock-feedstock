@@ -5,9 +5,13 @@ Home: https://github.com/conda-incubator/conda-lock
 
 Package license: MIT
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/conda-lock-feedstock/blob/master/LICENSE.txt)
 
 Summary: Lightweight lockfile for conda environments
+
+Development: https://github.com/conda-incubator/conda-lock
+
+Documentation: https://github.com/conda-incubator/conda-lock/blob/master/README.md
 
 Conda lock is a lightweight library that can be used to generate fully
 reproducible lock files for conda environments.
