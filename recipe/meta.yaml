@@ -30,6 +30,7 @@ requirements:
     - jinja2
     - setuptools
     - toml
+    - click-default-group
 
 test:
   imports:
