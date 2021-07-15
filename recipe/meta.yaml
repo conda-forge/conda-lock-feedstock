@@ -1,5 +1,5 @@
 {% set name = "conda-lock" %}
-{% set version = "0.10.0" %}
+{% set version = "0.11.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name.replace('-', '_') }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: cc947c9fe98d67eb6cb0a77190515f552933c3c7658c2837e117ca792a5feec3
+  sha256: 61c149d939599010eb414d30ea4b276660a50a0b6ced3a72b3461ea8fed73689
 
 build:
   number: 0
