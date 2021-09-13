@@ -1,5 +1,5 @@
 {% set name = "conda-lock" %}
-{% set version = "0.11.3" %}
+{% set version = "0.12.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name.replace('-', '_') }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 255623b1c94c9691eccc1a46546f9e9c722d3f36b1c2ccc34b3e7be17305a4f1
+  sha256: c630d7e0c07898f96eef865a66da95b7e5ea2df0d6316bba823ca4476ec90aa8
 
 build:
   number: 0
@@ -30,7 +30,9 @@ requirements:
     - jinja2
     - setuptools
     - toml
+    - click
     - click-default-group
+    - pydantic >=1.8.1
 
 test:
   imports:
