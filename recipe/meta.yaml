@@ -30,7 +30,9 @@ requirements:
     - jinja2
     - setuptools
     - toml
+    - click
     - click-default-group
+    - pydantic >=1.8.1
 
 test:
   imports:
