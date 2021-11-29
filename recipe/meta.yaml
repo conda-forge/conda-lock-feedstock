@@ -10,7 +10,7 @@ source:
   sha256: be38858f6f5f97912113b365a3be9ed370fa37bb37ced6942db4b8c987437e6b
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   noarch: python
   entry_points:
@@ -23,16 +23,16 @@ requirements:
     - setuptools >=41.2
     - setuptools_scm
   run:
-    - python >=3.6
-    - ensureconda
-    - pyyaml
-    - requests
-    - jinja2
-    - setuptools
-    - toml
     - click
     - click-default-group
+    - ensureconda >=1.3
+    - jinja2
     - pydantic >=1.8.1
+    - python >=3.6
+    - pyyaml >=5.1
+    - requests >=2
+    - setuptools
+    - toml
 
 test:
   imports:
