@@ -34,7 +34,7 @@ requirements:
     - setuptools
     - toml
     - typing-extensions
-    - poetry
+    - poetry  >=1.0,<1.2
     - ruamel.yaml
 
 test:
