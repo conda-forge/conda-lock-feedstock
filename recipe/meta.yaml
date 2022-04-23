@@ -10,7 +10,7 @@ source:
   sha256: 70588a46aadf73be495a2a6b067374f2f77a56e2834c0f77c436fef374594647
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   noarch: python
   entry_points:
@@ -34,7 +34,7 @@ requirements:
     - setuptools
     - toml
     - typing-extensions
-    - poetry  >=1.0,<1.2
+    - poetry
     - ruamel.yaml
 
 test:
