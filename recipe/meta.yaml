@@ -24,6 +24,7 @@ requirements:
     - setuptools_scm
     - hatch
     - hatch-requirements-txt
+    - hatch-vcs
   run:
     - python >=3.6
     - click-default-group
