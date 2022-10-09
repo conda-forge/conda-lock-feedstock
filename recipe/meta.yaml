@@ -22,20 +22,21 @@ requirements:
     - pip
     - setuptools >=41.2
     - setuptools_scm
+    - hatch
   run:
-    - click >=8.0
+    - python >=3.6
     - click-default-group
+    - click >=8.0
     - ensureconda >=1.3
     - jinja2
+    - poetry <1.2
     - pydantic >=1.8.1
-    - python >=3.6
     - pyyaml >=5.1
     - requests >=2
-    - setuptools
-    - toml
+    - ruamel_yaml
+    - tomli
+    - toolz <1.0.0,>=0.12.0
     - typing-extensions
-    - poetry
-    - ruamel.yaml
 
 test:
   imports:
