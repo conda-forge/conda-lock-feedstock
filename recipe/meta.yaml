@@ -10,7 +10,7 @@ source:
   sha256: 09a801914ff04a32154b51c8956001a1843c3ccac5c2fdf66be3a558345af7ea
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   noarch: python
   entry_points:
@@ -31,7 +31,7 @@ requirements:
     - click >=8.0
     - ensureconda >=1.3
     - jinja2
-    - poetry <1.2
+    - poetry
     - pydantic >=1.8.1
     - pyyaml >=5.1
     - requests >=2
