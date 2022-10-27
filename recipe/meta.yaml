@@ -10,7 +10,7 @@ source:
   sha256: ee10c05863d243787237d1289233e5f8b0b2dc52094c5ca05176cddee35f0dfe
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   noarch: python
   entry_points:
@@ -28,6 +28,8 @@ requirements:
   run:
     - python >=3.6
     - cachecontrol >=0.12.9
+    # optional dep for cachecontrol
+    - filelock >=3.8.0
     - cachy >=0.3.0
     - click >=8.0
     - click-default-group
