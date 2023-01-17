@@ -11,7 +11,7 @@ Summary: Lightweight lockfile for conda environments
 
 Development: https://github.com/conda-incubator/conda-lock
 
-Documentation: https://github.com/conda-incubator/conda-lock/blob/master/README.md
+Documentation: https://conda-incubator.github.io/conda-lock
 
 Conda lock is a lightweight library that can be used to generate fully
 reproducible lock files for conda environments.
@@ -156,6 +156,7 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@bollwyvl](https://github.com/bollwyvl/)
 * [@mariusvniekerk](https://github.com/mariusvniekerk/)
 * [@ocefpaf](https://github.com/ocefpaf/)
 
