@@ -5,7 +5,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/conda_lock-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/c/conda-lock/conda_lock-{{ version }}.tar.gz
   sha256: 55c115a852e63395db8a6a90cf2892aab0543959f2d0bafb83158b6863831b8a
 
 build:
