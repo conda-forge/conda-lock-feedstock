@@ -26,11 +26,7 @@ requirements:
     - hatch-vcs
   run:
     - python >=3.6
-    - cachecontrol >=0.12.9
-    # optional dep for cachecontrol >=0.13
-    - filelock >=3.8.0
-    # optional dep for cachecontrol <0.13
-    - lockfile >=0.9
+    - cachecontrol-with-filecache >=0.12.9
     - cachy >=0.3.0
     - click >=8.0
     - click-default-group
