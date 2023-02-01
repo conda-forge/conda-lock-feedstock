@@ -9,7 +9,7 @@ source:
   sha256: 55c115a852e63395db8a6a90cf2892aab0543959f2d0bafb83158b6863831b8a
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   noarch: python
   entry_points:
@@ -26,9 +26,7 @@ requirements:
     - hatch-vcs
   run:
     - python >=3.6
-    - cachecontrol >=0.12.9
-    # optional dep for cachecontrol
-    - filelock >=3.8.0
+    - cachecontrol-with-filecache >=0.12.9
     - cachy >=0.3.0
     - click >=8.0
     - click-default-group
