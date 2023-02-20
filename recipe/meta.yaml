@@ -9,7 +9,7 @@ source:
   sha256: 55c115a852e63395db8a6a90cf2892aab0543959f2d0bafb83158b6863831b8a
 
 build:
-  number: 1
+  number: 2
   script: {{ PYTHON }} -m pip install . -vv
   noarch: python
   entry_points:
@@ -58,7 +58,7 @@ test:
     - pip
 
 about:
-  home: https://github.com/conda-incubator/conda-lock
+  home: https://github.com/conda/conda-lock
   license: MIT
   license_family: MIT
   license_file: LICENSE
@@ -71,8 +71,7 @@ about:
     This also has the added benefit of acting as an external presolve for conda
     as the lockfiles it generates results in the conda solver not being invoked
     when installing the packages from the generated lockfile.
-  doc_url: https://conda-incubator.github.io/conda-lock
-  dev_url: https://github.com/conda-incubator/conda-lock
+  doc_url: https://conda.github.io/conda-lock/ 
 
 extra:
   recipe-maintainers:
