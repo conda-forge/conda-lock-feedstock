@@ -1,15 +1,13 @@
 About conda-lock
 ================
 
-Home: https://github.com/conda-incubator/conda-lock
+Home: https://github.com/conda/conda-lock
 
 Package license: MIT
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/conda-lock-feedstock/blob/main/LICENSE.txt)
 
 Summary: Lightweight lockfile for conda environments
-
-Development: https://github.com/conda-incubator/conda-lock
 
 Documentation: https://conda.github.io/conda-lock/
 
