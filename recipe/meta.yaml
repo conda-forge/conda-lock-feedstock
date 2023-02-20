@@ -58,7 +58,7 @@ test:
     - pip
 
 about:
-  home: https://github.com/conda-incubator/conda-lock
+  home: https://github.com/conda/conda-lock
   license: MIT
   license_family: MIT
   license_file: LICENSE
@@ -72,7 +72,6 @@ about:
     as the lockfiles it generates results in the conda solver not being invoked
     when installing the packages from the generated lockfile.
   doc_url: https://conda.github.io/conda-lock/ 
-  dev_url: https://github.com/conda-incubator/conda-lock
 
 extra:
   recipe-maintainers:
