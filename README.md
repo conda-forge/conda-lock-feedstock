@@ -1,11 +1,11 @@
-About conda-lock
-================
+About conda-lock-feedstock
+==========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/conda-lock-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/conda/conda-lock
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/conda-lock-feedstock/blob/main/LICENSE.txt)
 
 Summary: Lightweight lockfile for conda environments
 
@@ -155,6 +155,7 @@ Feedstock Maintainers
 =====================
 
 * [@bollwyvl](https://github.com/bollwyvl/)
+* [@maresb](https://github.com/maresb/)
 * [@mariusvniekerk](https://github.com/mariusvniekerk/)
 * [@ocefpaf](https://github.com/ocefpaf/)
 
