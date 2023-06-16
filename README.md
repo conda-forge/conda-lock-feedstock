@@ -155,6 +155,7 @@ Feedstock Maintainers
 =====================
 
 * [@bollwyvl](https://github.com/bollwyvl/)
+* [@maresb](https://github.com/maresb/)
 * [@mariusvniekerk](https://github.com/mariusvniekerk/)
 * [@ocefpaf](https://github.com/ocefpaf/)
 
