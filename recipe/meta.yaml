@@ -1,4 +1,4 @@
-{% set version = "2.0.0" %}
+{% set version = "2.1.0" %}
 
 package:
   name: conda-lock
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/c/conda-lock/conda_lock-{{ version }}.tar.gz
-  sha256: 580975ff4de1c74cdca29b4c87e6d9784ecaf7586bc8ec1244e8ff0dcb11993f
+  sha256: 9973d463f609f4cad7fd69e5aeef7fcd4fbafb0e364056e78957121566dc2625
 
 build:
   number: 0
@@ -71,7 +71,7 @@ about:
     This also has the added benefit of acting as an external presolve for conda
     as the lockfiles it generates results in the conda solver not being invoked
     when installing the packages from the generated lockfile.
-  doc_url: https://conda.github.io/conda-lock/ 
+  doc_url: https://conda.github.io/conda-lock/
 
 extra:
   recipe-maintainers:
