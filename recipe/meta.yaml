@@ -28,13 +28,12 @@ requirements:
     - ensureconda >=1.3
     - gitpython >=3.1.30
     - jinja2
-    - pydantic >=1.8.1
+    - pydantic >=1.10
     - pyyaml >=5.1
-    - ruamel.yaml
     - tomli
     - typing_extensions
+    - ruamel.yaml
     - toolz >=0.12.0,<1.0.0
-    - filelock >=3.8.0
     - cachecontrol-with-filecache >=0.12.9
     - cachy >=0.3.0
     - clikit >=0.6.2
