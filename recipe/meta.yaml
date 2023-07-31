@@ -1,4 +1,4 @@
-{% set version = "2.1.1" %}
+{% set version = "2.1.2" %}
 
 package:
   name: conda-lock
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/c/conda-lock/conda_lock-{{ version }}.tar.gz
-  sha256: 20dc776f38b68e952671cffd4b97e46e8592070d670906839601d10250c71c8d
+  sha256: 4a51f04a962ec563e8b8d133fa214012ad0f284967abb49877d5b5340283165c
 
 build:
   number: 0
@@ -28,13 +28,12 @@ requirements:
     - ensureconda >=1.3
     - gitpython >=3.1.30
     - jinja2
-    - pydantic >=1.8.1
+    - pydantic >=1.10
     - pyyaml >=5.1
-    - ruamel.yaml
     - tomli
     - typing_extensions
+    - ruamel.yaml
     - toolz >=0.12.0,<1.0.0
-    - filelock >=3.8.0
     - cachecontrol-with-filecache >=0.12.9
     - cachy >=0.3.0
     - clikit >=0.6.2
