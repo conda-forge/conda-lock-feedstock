@@ -1,4 +1,4 @@
-{% set version = "2.2.1" %}
+{% set version = "2.3.0" %}
 
 package:
   name: conda-lock
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/c/conda-lock/conda_lock-{{ version }}.tar.gz
-  sha256: 5fe13e49877c7770d205e38e58ba2a4b6f98a88ebfe87576bac37ea55a6ae217
+  sha256: 5f20c2fa8d560cb13c776e0723af6add0765b349862cc051cf9c77fcef4588d0
 
 build:
   number: 0
