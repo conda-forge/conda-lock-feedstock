@@ -48,6 +48,8 @@ requirements:
     - tomlkit >=0.7.0
     - virtualenv >=20.0.26
     - urllib3 >=1.26.5,<2.0
+  run_constrained:
+    - mamba <2
 
 test:
   imports:
