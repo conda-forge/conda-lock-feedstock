@@ -26,30 +26,47 @@ requirements:
     - python >={{ python_min }}
     - click >=8.0
     - click-default-group
-    - ensureconda >=1.4.4
+    - ensureconda >=1.4.7
+    - filelock
     - gitpython >=3.1.30
     - jinja2
-    - pydantic >=1.10
+    - packaging >=24.0
+    - platformdirs >=3.10.0,<5.0.0
+    - pydantic >=2
     - pyyaml >=5.1
-    - setuptools
-    - tomli
-    - typing_extensions
+    - requests >=2.26,<3.0
     - ruamel.yaml
-    - toolz >=0.12.0,<1.0.0
-    - cachecontrol-with-filecache >=0.12.9
-    - cachy >=0.3.0
-    - clikit >=0.6.2
-    - crashtest >=0.3.0
-    - html5lib >=1.0
-    - keyring >=21.2.0
-    - packaging >=20.4
-    - pkginfo >=1.4
-    - requests >=2.18
-    - tomlkit >=0.7.0
-    - virtualenv >=20.0.26
-    - urllib3 >=1.26.5,<2.0
-  run_constrained:
-    - mamba <2
+    - semver >=3,<4
+    - setuptools
+    - tomli >=2.0.1,<3.0.0
+    - tomlkit >=0.11.4,<1.0.0
+    - typing_extensions
+    - boltons >=23.0.0
+    - charset-normalizer
+    - zstandard >=0.15
+    - python-build >=1.2.1,<2.0.0
+    - cachecontrol >=0.14.0,<0.15.0
+    - cachecontrol-with-filecache
+    - crashtest >=0.4.1,<0.5.0
+    - dulwich >=0.22.6,<0.23.0
+    - python-fastjsonschema >=2.18.0,<3.0.0
+    - importlib-metadata >=4.4
+    - python-installer >=0.7.0,<0.8.0
+    - keyring >=25.1.0,<26.0.0
+    - pkginfo >=1.12,<2.0
+    - pyproject_hooks >=1.0.0,<2.0.0
+    - requests-toolbelt >=1.0.0,<2.0.0
+    - shellingham >=1.5,<2.0
+    - trove-classifiers >=2022.5.19
+    - virtualenv >=20.26.6,<21.0.0
+    # See https://github.com/conda-forge/poetry-feedstock/blob/main/recipe/meta.yaml
+    - xattr >=1.0.0,<2.0.0  # [osx]
+
+    # Keep the package noarch
+    # <https://conda-forge.org/docs/maintainer/knowledge_base/#noarch-packages-with-os-specific-dependencies>
+    - __linux  # [linux]
+    - __osx    # [osx]
+    - __win    # [win]
 
 test:
   imports:
