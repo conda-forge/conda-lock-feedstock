@@ -1,4 +1,4 @@
-{% set version = "3.0.0" %}
+{% set version = "3.0.1" %}
 
 package:
   name: conda-lock
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/c/conda-lock/conda_lock-{{ version }}.tar.gz
-  sha256: 2ec53330374060f7a5d66c615132706a154b349fa8c5811935640b7049fc9840
+  sha256: 016c3685db7e875c8e3c00380ff3ad9c1ea7314e5310a14fe2822e2881084888
 
 build:
   number: 0
@@ -23,6 +23,7 @@ requirements:
     - hatch-vcs
     - pip
   run:
+    - ruamel_yaml
     - python >={{ python_min }}
     - click >=8.0
     - click-default-group
@@ -40,7 +41,7 @@ requirements:
     - setuptools
     - tomli >=2.0.1,<3.0.0
     - tomlkit >=0.11.4,<1.0.0
-    - typing_extensions
+    - typing_extensions >=4.6.1
     - boltons >=23.0.0
     - charset-normalizer
     - zstandard >=0.15
