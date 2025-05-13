@@ -19,7 +19,6 @@ This also has the added benefit of acting as an external presolve for conda
 as the lockfiles it generates results in the conda solver not being invoked
 when installing the packages from the generated lockfile.
 
-
 Current build status
 ====================
 
