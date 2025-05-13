@@ -13,7 +13,7 @@ source:
   sha256: 016c3685db7e875c8e3c00380ff3ad9c1ea7314e5310a14fe2822e2881084888
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script:
     - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
@@ -80,10 +80,10 @@ tests:
         - 3.13.*
   - requirements:
       run:
-        - pip
         - python ${{ python_min }}.*
     script:
       - conda-lock --help
+      - python -c "assert __import__('conda_lock').__version__ == '${{ version }}'"
 
 about:
   license: MIT
