@@ -1,30 +1,35 @@
-{% set version = "3.0.1" %}
+# yaml-language-server: $schema=https://raw.githubusercontent.com/prefix-dev/recipe-format/main/schema.json
+schema_version: 1
+
+context:
+  version: 3.0.1
 
 package:
   name: conda-lock
-  version: {{ version }}
+  version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/c/conda-lock/conda_lock-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/c/conda-lock/conda_lock-${{ version }}.tar.gz
   sha256: 016c3685db7e875c8e3c00380ff3ad9c1ea7314e5310a14fe2822e2881084888
 
 build:
   number: 0
   noarch: python
   script:
-    - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
-  entry_points:
-    - conda-lock = conda_lock:main
+    - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
+  python:
+    entry_points:
+      - conda-lock = conda_lock:main
 
 requirements:
   host:
-    - python {{ python_min }}
+    - python ${{ python_min }}.*
     - hatchling
     - hatch-vcs
     - pip
   run:
-    - ruamel_yaml
-    - python >={{ python_min }}
+    - __${{ noarch_platform }}
+    - python >=${{ python_min }}
     - click >=8.0
     - click-default-group
     - ensureconda >=1.4.7
@@ -61,30 +66,27 @@ requirements:
     - trove-classifiers >=2022.5.19
     - virtualenv >=20.26.6,<21.0.0
     # See https://github.com/conda-forge/poetry-feedstock/blob/main/recipe/meta.yaml
-    - xattr >=1.0.0,<2.0.0  # [osx]
-
-    # Keep the package noarch
-    # <https://conda-forge.org/docs/maintainer/knowledge_base/#noarch-packages-with-os-specific-dependencies>
-    - __linux  # [linux]
-    - __osx    # [osx]
-    - __win    # [win]
-  run_constrained:
+    - if: noarch_platform == "osx"
+      then: xattr >=1.0.0,<2.0.0
+  run_constraints:
     - mamba !=2.0.0,!=2.0.1,!=2.0.2,!=2.0.3,!=2.0.4,!=2.0.5,!=2.0.6
 
-test:
-  imports:
-    - conda_lock
-  commands:
-    - pip check
-    - conda-lock --help
-  requires:
-    - pip
-    - python {{ python_min }}
+tests:
+  - python:
+      imports: conda_lock
+      pip_check: true
+      python_version:
+        - ${{ python_min }}.*
+        - 3.13.*
+  - requirements:
+      run:
+        - pip
+        - python ${{ python_min }}.*
+    script:
+      - conda-lock --help
 
 about:
-  home: https://github.com/conda/conda-lock
   license: MIT
-  license_family: MIT
   license_file: LICENSE
   summary: Lightweight lockfile for conda environments
   description: |
@@ -95,7 +97,8 @@ about:
     This also has the added benefit of acting as an external presolve for conda
     as the lockfiles it generates results in the conda solver not being invoked
     when installing the packages from the generated lockfile.
-  doc_url: https://conda.github.io/conda-lock/
+  homepage: https://github.com/conda/conda-lock
+  documentation: https://conda.github.io/conda-lock/
 
 extra:
   recipe-maintainers:
