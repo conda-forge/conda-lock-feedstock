@@ -66,8 +66,7 @@ requirements:
     - trove-classifiers >=2022.5.19
     - virtualenv >=20.26.6,<21.0.0
     # See https://github.com/conda-forge/poetry-feedstock/blob/main/recipe/meta.yaml
-    - if: noarch_platform == "osx"
-      then: xattr >=1.0.0,<2.0.0
+    - ${{ "xattr >=1.0.0,<2.0.0" if noarch_platform == "osx" else "python" }}
   run_constraints:
     - mamba !=2.0.0,!=2.0.1,!=2.0.2,!=2.0.3,!=2.0.4,!=2.0.5,!=2.0.6
 
@@ -86,8 +85,27 @@ tests:
       - python -c "assert __import__('conda_lock').__version__ == '${{ version }}'"
 
 about:
-  license: MIT
-  license_file: LICENSE
+  license: |-
+    Apache-2.0 AND BSD-2-Clause AND BSD-3-Clause AND ISC AND LGPL-3.0-or-later AND MIT
+  license_file:
+    # main project license
+    - LICENSE
+    # vendored license summary
+    - conda_lock/_vendor/LICENSES.md
+    # rest of explicit licenses
+    - conda_lock/_vendor/auxlib/LICENSE
+    - conda_lock/_vendor/cleo/LICENSE
+    - conda_lock/_vendor/conda/_vendor/appdirs.LICENSE.txt
+    - conda_lock/_vendor/conda/_vendor/distro.LICENSE.txt
+    - conda_lock/_vendor/conda/_vendor/frozendict/LICENSE.txt
+    - conda_lock/_vendor/conda/_vendor/py_cpuinfo.LICENSE
+    - conda_lock/_vendor/conda/LICENSE
+    - conda_lock/_vendor/grayskull/LICENSE
+    - conda_lock/_vendor/poetry/core/_vendor/fastjsonschema/LICENSE
+    - conda_lock/_vendor/poetry/core/_vendor/lark/LICENSE
+    - conda_lock/_vendor/poetry/core/_vendor/packaging/LICENSE
+    - conda_lock/_vendor/poetry/core/_vendor/tomli/LICENSE
+    - conda_lock/_vendor/poetry/LICENSE
   summary: Lightweight lockfile for conda environments
   description: |
     Conda lock is a lightweight library that can be used to generate fully
@@ -98,7 +116,7 @@ about:
     as the lockfiles it generates results in the conda solver not being invoked
     when installing the packages from the generated lockfile.
   homepage: https://github.com/conda/conda-lock
-  documentation: https://conda.github.io/conda-lock/
+  documentation: https://conda.github.io/conda-lock
 
 extra:
   recipe-maintainers:
