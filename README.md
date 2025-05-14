@@ -5,11 +5,11 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/conda-lock-feed
 
 Home: https://github.com/conda/conda-lock
 
-Package license: MIT
+Package license: Apache-2.0 AND BSD-2-Clause AND BSD-3-Clause AND ISC AND MIT
 
 Summary: Lightweight lockfile for conda environments
 
-Documentation: https://conda.github.io/conda-lock/
+Documentation: https://conda.github.io/conda-lock
 
 Conda lock is a lightweight library that can be used to generate fully
 reproducible lock files for conda environments.
@@ -18,7 +18,6 @@ platforms you desire lockfiles for.
 This also has the added benefit of acting as an external presolve for conda
 as the lockfiles it generates results in the conda solver not being invoked
 when installing the packages from the generated lockfile.
-
 
 Current build status
 ====================
