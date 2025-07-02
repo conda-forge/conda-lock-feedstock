@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "3.0.3"
+  version: "3.0.4"
 
 package:
   name: conda-lock
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/c/conda-lock/conda_lock-${{ version }}.tar.gz
-  sha256: 00d0771a08414759551b6a3a1e5a2ea47bcec21736047e346da90c29124d3928
+  sha256: 7ba6f8067834b3aae8662ed6316c5f15def431f129ddf423f7957c6181523db6
 
 build:
   number: 1
@@ -93,8 +93,8 @@ about:
     # vendored license summary
     - conda_lock/_vendor/LICENSES.md
     # rest of explicit licenses
-    - conda_lock/_vendor/auxlib/LICENSE
     - conda_lock/_vendor/cleo/LICENSE
+    - conda_lock/_vendor/conda/auxlib/LICENSE
     - conda_lock/_vendor/conda/_vendor/appdirs.LICENSE.txt
     - conda_lock/_vendor/conda/_vendor/distro.LICENSE.txt
     - conda_lock/_vendor/conda/_vendor/frozendict/LICENSE.txt
