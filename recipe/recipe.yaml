@@ -93,8 +93,8 @@ about:
     # vendored license summary
     - conda_lock/_vendor/LICENSES.md
     # rest of explicit licenses
-    - conda_lock/_vendor/auxlib/LICENSE
     - conda_lock/_vendor/cleo/LICENSE
+    - conda_lock/_vendor/conda/auxlib/LICENSE
     - conda_lock/_vendor/conda/_vendor/appdirs.LICENSE.txt
     - conda_lock/_vendor/conda/_vendor/distro.LICENSE.txt
     - conda_lock/_vendor/conda/_vendor/frozendict/LICENSE.txt
