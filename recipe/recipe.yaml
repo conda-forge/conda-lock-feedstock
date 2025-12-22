@@ -29,10 +29,8 @@ requirements:
     - pip
     - python ${{ python_min }}.*
   run:
-    - if: noarch_platform == "osx"
-      then:
-        # See https://github.com/conda-forge/poetry-feedstock/blob/main/recipe/meta.yaml
-        - xattr >=1.0.0,<2.0.0
+    # See https://github.com/conda-forge/poetry-feedstock/blob/main/recipe/meta.yaml
+    - ${{ "xattr >=1.0.0,<2.0.0" if noarch_platform == "osx" }}
     - __${{ noarch_platform }}
     - boltons >=23.0.0
     - cachecontrol >=0.14.0,<0.15.0
