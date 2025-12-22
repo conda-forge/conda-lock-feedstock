@@ -54,7 +54,7 @@ requirements:
     - cachecontrol >=0.14.0,<0.15.0
     - cachecontrol-with-filecache
     - crashtest >=0.4.1,<0.5.0
-    - dulwich >=0.22.6,<0.23.0
+    - dulwich >=0.22.6,<0.25.0
     - python-fastjsonschema >=2.18.0,<3.0.0
     - importlib-metadata >=4.4
     - python-installer >=0.7.0,<0.8.0
