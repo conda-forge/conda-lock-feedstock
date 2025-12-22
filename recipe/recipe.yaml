@@ -104,7 +104,6 @@ about:
     - conda_lock/_vendor/conda/py_cpuinfo.LICENSE
     - conda_lock/_vendor/grayskull/LICENSE
     - conda_lock/_vendor/LICENSES.md
-    - conda_lock/_vendor/LICENSES.md
     - conda_lock/_vendor/poetry_core.LICENSE
     - conda_lock/_vendor/poetry.LICENSE
     - conda_lock/_vendor/poetry/core/_vendor/fastjsonschema/LICENSE
