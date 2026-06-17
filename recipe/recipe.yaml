@@ -16,9 +16,6 @@ source:
 build:
   number: 0
   noarch: python
-  script:
-    - echo "SYSTEMROOT: %SYSTEMROOT%"
-    - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
   python:
     entry_points:
       - conda-lock = conda_lock:main
