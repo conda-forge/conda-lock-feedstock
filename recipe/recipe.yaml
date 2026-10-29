@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "4.0.3"
+  version: "4.0.4"
   python_check_max: "3.14"
 
 package:
@@ -11,11 +11,13 @@ package:
 
 source:
   url: https://pypi.org/packages/source/c/conda-lock/conda_lock-${{ version }}.tar.gz
-  sha256: 455efdfddb8e03cb44f2c4b7921e0ddc9d30e949c90611569dbe5aa652eb3079
+  sha256: 90c1111958d756f1bb3480312cb0303d0dab909b04fda4aaaefb352e6621113f
 
 build:
   number: 0
   noarch: python
+  script:
+    - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
   python:
     entry_points:
       - conda-lock = conda_lock:main
